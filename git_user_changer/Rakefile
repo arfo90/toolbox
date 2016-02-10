@@ -1,0 +1,15 @@
+require 'rake'
+
+task :switch, [:user] do |t, args|
+ user = args[:user].to_i
+ if user==0
+   puts 'i am here'
+   sh "git config --global user.name 'Amireza Fatemi'"
+   sh "git config --global user.email arfo.amireza@gmail.com"
+ elsif user==1
+   sh "git config --global user.name 'Amireza Fatemi'"
+   sh "git config --global user.email a@example1.com"
+ end 
+ ## and it can goes like that, so you can easily just 
+ ## change your git user name by using 'rake switch[0]'
+end
