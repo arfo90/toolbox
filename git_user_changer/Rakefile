@@ -3,7 +3,6 @@ require 'rake'
 task :switch, [:user] do |t, args|
  user = args[:user].to_i
  if user==0
-   puts 'i am here'
    sh "git config --global user.name 'Amireza Fatemi'"
    sh "git config --global user.email arfo.amireza@gmail.com"
  elsif user==1
